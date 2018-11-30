@@ -1,0 +1,8 @@
+rule CC
+    description = コンパイル (C言語 - GCC): $in >> $out 
+    command = gcc $in -o $out
+
+build Quizer: CC Main.c
+
+default Quizer
+
