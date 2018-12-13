@@ -14,7 +14,7 @@ void main() {
 	for (;;) {
 		printf("> ");
 		scanf("%d", &sel);
-rstCnt();
+
 		switch(sel) {
 			case 1:
 				exit(0);
