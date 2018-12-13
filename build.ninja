@@ -2,7 +2,7 @@ rule CC
     description = コンパイル (C言語 - GCC): $in >> $out 
     command = gcc $in -o $out
 
-build Quizer: CC Quiz.c Main.c
+build Quizer: CC Main.c Quiz.c
 
 default Quizer
 

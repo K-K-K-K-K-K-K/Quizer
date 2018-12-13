@@ -5,7 +5,14 @@
 - Ninja
 
 ## コンパイル
-```sh
+```
 $ ninja
+```
+
+コマンド手打の場合: `gcc Main.c Quiz.c -o Quizer`
+
+## 実行
+```
+$ ./Quizer
 ```
 
