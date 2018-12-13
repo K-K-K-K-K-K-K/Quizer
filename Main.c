@@ -4,6 +4,7 @@
 
 void printStartMsg();
 void printHelpMsg();
+void mrymryhrhrhrhr();
 
 void main() {
 	printStartMsg();
@@ -13,7 +14,7 @@ void main() {
 	for (;;) {
 		printf("> ");
 		scanf("%d", &sel);
-
+rstCnt();
 		switch(sel) {
 			case 1:
 				exit(0);
@@ -24,7 +25,12 @@ void main() {
 				break;
 
 			case 3:
-				printf("KANJHI\n");
+				printf("KANJI\n");
+				printf("\n");
+				break;
+
+			case 364364:
+				mrymryhrhrhrhr();
 				printf("\n");
 				break;
 
@@ -46,5 +52,15 @@ void printHelpMsg() {
 	printf("    2: コマンド一覧表の表示\n");
 	printf("    3: [Quiz] 漢字の読み方\n");
 	printf("    \n");
+}
+
+void mrymryhrhrhrhr() {
+	char q[] = "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！";
+	char *a[] = {
+		"右向くんだよ90度",
+		"エンジン全開！",
+		"こ↑こ↓（到着）"
+	};
+	quiz(q, 3, a, 1);
 }
 
