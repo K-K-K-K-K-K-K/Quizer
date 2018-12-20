@@ -11,12 +11,25 @@ void mrymryhrhrhrhr();
 void main() {
 	printStartMsg();
 	printHelpMsg();
-
-	int sel;
+	char sel[6];
+	char number;
+	int no;
+	
+	//int sel;
 	for (;;) {
 		printf("> ");
-		scanf("%d", &sel);
-
+		//scanf("%d", &sel);
+		scanf("%s", sel);
+		if(strcmp(sel,"1")==0||strcmp(sel,"2")==0||strcmp(sel,"3")==0||strcmp(sel,"364364")==0){
+			if(strcmp(sel,"364364")==0){
+					mrymryhrhrhrhr();
+					printf("\n");
+					continue;
+			}
+			
+		number=sel[0];
+		no=number-'0';
+			
 		switch(sel) {
 			case 1:
 				exit(0);
@@ -31,14 +44,19 @@ void main() {
 				printf("\n");
 				break;
 
-			case 364364:
+			/*case 364364:
 				mrymryhrhrhrhr();
 				printf("\n");
 				break;
-
+			*/
 			default:
 				printf("[エラー] 不正な入力\n");
 				printf("\n");
+			}
+		}else{
+		printf("[エラー]不正な入力\n");
+		printf("\n");
+		continue;
 		}
 	}
 }
