@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <errorno.h>
 #include "Quiz.h"
 
 void printStartMsg();
@@ -13,7 +14,14 @@ void main() {
 	int sel;
 	for (;;) {
 		printf("> ");
-		scanf("%d", &sel);
+		
+		char cmd[100];
+		scanf("%s", cmd);
+		sel = strtol(cmd, null, 10);
+		if (!isdigit(sel)) {
+			printf("[エラー] 不正な入力\n");
+			continue;
+		}
 
 		switch(sel) {
 			case 1:
