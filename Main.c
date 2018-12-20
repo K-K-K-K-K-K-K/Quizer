@@ -30,7 +30,7 @@ void main() {
 		number=sel[0];
 		no=number-'0';
 			
-		switch(sel) {
+		switch(no) {
 			case 1:
 				exit(0);
 				break;
