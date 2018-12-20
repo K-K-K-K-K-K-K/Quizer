@@ -61,10 +61,11 @@ void mrymryhrhrhrhr() {
 	strcpy(qa.q, "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！");
 	printf("%s\n", qa.q);
 	strcpy(qa.a[0], "右向くんだよ90度");
+	printf("%s\n", qa.a[0]);
 	strcpy(qa.a[1], "エンジン全開！");
 	strcpy(qa.a[2], "こ↑こ↓（到着）");
 	qa.ansArrLen = 3;
 	qa.crtAnsNum = 1;
-	quiz(&qa);
+	quiz(qa);
 }
 
