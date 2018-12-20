@@ -5,7 +5,7 @@ typedef struct {
 	char *q;
 	int crtAnsNum;
 	int ansArrLen;
-	char *a[100];
+	char** a;
 } QA;
 
 #endif

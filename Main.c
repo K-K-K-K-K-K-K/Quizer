@@ -78,7 +78,9 @@ void mrymryhrhrhrhr() {
 	QA qa;
 	strcpy(qa.q, "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！");
 	printf("%s\n", qa.q);
-	strcpy(qa.a[0], "右向くんだよ90度");
+	qa.a = malloc(sizeof(char *) * 1919);
+	qa.a[0] = "aaa";
+	//strcpy(qa.a[0], "右向くんだよ90度");
 	printf("%s\n", qa.a[0]);
 	strcpy(qa.a[1], "エンジン全開！");
 	strcpy(qa.a[2], "こ↑こ↓（到着）");
