@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <errorno.h>
+#include <string.h>
 #include "Quiz.h"
+#include "QAUnit.h"
 
 void printStartMsg();
 void printHelpMsg();
@@ -14,14 +15,7 @@ void main() {
 	int sel;
 	for (;;) {
 		printf("> ");
-		
-		char cmd[100];
-		scanf("%s", cmd);
-		sel = strtol(cmd, null, 10);
-		if (!isdigit(sel)) {
-			printf("[エラー] 不正な入力\n");
-			continue;
-		}
+		scanf("%d", &sel);
 
 		switch(sel) {
 			case 1:
@@ -63,12 +57,13 @@ void printHelpMsg() {
 }
 
 void mrymryhrhrhrhr() {
-	char q[] = "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！";
-	char *a[] = {
-		"右向くんだよ90度",
-		"エンジン全開！",
-		"こ↑こ↓（到着）"
-	};
-	quiz(q, 3, a, 1);
+	QA qa;
+	strcpy(qa.q, "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！");
+	strcpy(qa.a[0], "右向くんだよ90度");
+	strcpy(qa.a[1], "エンジン全開！");
+	strcpy(qa.a[2], "こ↑こ↓（到着）");
+	qa.ansArrLen = 3;
+	qa.crtAnsNum = 1;
+	quiz(&qa);
 }
 
