@@ -1,5 +1,5 @@
-#ifndef QA_H
-#define QA_H
+#ifndef QAUnit_H
+#define QAUnit_H
 
 typedef struct {
 	char *q; // 問題文

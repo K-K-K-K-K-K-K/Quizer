@@ -1,5 +1,5 @@
-#ifndef _Quiz_H_ 
-#define _QUIZ_H_
+#ifndef _Quiz_H_
+#define _Quiz_H_
 
 #include "QAUnit.h"
 
