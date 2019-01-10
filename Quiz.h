@@ -4,7 +4,6 @@
 #include "QAUnit.h"
 
 void rstCnt();
-//void quiz(char *q, int ansArrLen, char *a[], int crtAnsNum);
 void quiz(QA qa);
 
 #endif
