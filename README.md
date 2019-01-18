@@ -11,9 +11,9 @@
 $ ninja
 ```
 
-### コマンド手打の場合
+### コマンド手打ちの場合
 ```
-$ gcc Main.c Quiz.c -o Quizer
+$ gcc Main.c Quiz.c Quiz.h AnsProc.c AnsProc.h -o Quizer
 ```
 
 
