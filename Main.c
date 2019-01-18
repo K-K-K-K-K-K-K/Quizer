@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Quiz.h"
 #include "QAUnit.h"
+#include "Quiz.h"
+#include "AnsProc.h"
 
 void printStartMsg();
 void printHelpMsg();
@@ -82,9 +83,11 @@ void printHelpMsg() {
 
 // かくしコマンド, QA構造体の使用例
 void mrymryhrhrhrhr() {
+	initQuiz();
+	initAnsProc();
+
 	QA qa;
 	strcpy(qa.q, "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！");
-
 	strcpy(qa.a[0], "右向くんだよ90度");
 	strcpy(qa.a[1], "エンジン全開！");
 	strcpy(qa.a[2], "こ↑こ↓（到着）");

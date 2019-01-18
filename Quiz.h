@@ -3,7 +3,7 @@
 
 #include "QAUnit.h"
 
-void rstCnt();
+void initQuiz();
 void quiz(QA qa);
 
 #endif

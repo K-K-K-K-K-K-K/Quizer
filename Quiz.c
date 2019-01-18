@@ -2,10 +2,11 @@
 
 #include <stdio.h>
 #include "QAUnit.h"
+#include "AnsProc.h"
 
 int cnt = CNT_INITL;
 
-void rstCnt() {
+void initQuiz() {
 	cnt = CNT_INITL;
 }
 
@@ -22,15 +23,8 @@ void quiz(QA qa) {
 	printf("\n");
 
 	printf("    >> ");
-	int sel;
-	scanf("%d", &sel);
 
 	// 解答部呼出
-	// 仮: (
-	if (sel - 1 == qa.crtAnsIdx)
-		printf("正答\n");
-	else
-		printf("誤答\n");
-	// )
+	ansProc(qa.crtAnsIdx + 1);
 }
 
