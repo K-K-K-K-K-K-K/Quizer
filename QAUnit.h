@@ -1,6 +1,7 @@
 #ifndef QAUnit_H
 #define QAUnit_H
 
+#define PSIZE 100
 #define ASIZE 20
 #define STRSIZE 200
 
