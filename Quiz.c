@@ -27,7 +27,7 @@ void quiz(QA qa) {
 
 	// 解答部呼出
 	// 仮: (
-	if (sel == qa.crtAnsNum)
+	if (sel - 1 == qa.crtAnsIdx)
 		printf("正答\n");
 	else
 		printf("誤答\n");
