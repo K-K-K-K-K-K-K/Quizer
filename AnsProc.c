@@ -39,7 +39,6 @@ void ansProc(int crtAnsNum) {
 		printf("\n    [エラー]: 不正な入力\n");
 		printf("    >> ");
 	}
-printf("%d\n", ans);
 	time_t t2 = time(NULL);
 
 	printf("\n");
