@@ -44,7 +44,7 @@ void ansProc(int crtAnsNum) {
 }
 
 void ansFinProc() {
-	printf("    正答率: %d [%]\n", 100 * crt / pcnt);
+	printf("    正答率: %d [%%]\n", 100 * crt / pcnt);
 	printf("    平均回答時間: %.1f [秒]\n", (double) tcnt / (double) pcnt);
 }
 
