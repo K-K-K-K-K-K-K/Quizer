@@ -84,7 +84,7 @@ void main() {
 
 	// getQAsの試験
 	readQAFile("歴史");
-	for (int i = 0; i < 27; i++) {
+	for (int i = 0; i < 10; i++) {
 		QA qa = qas[i];
 
 		printf("qa.q: %s\n", qa.q);

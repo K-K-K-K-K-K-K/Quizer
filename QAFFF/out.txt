@@ -1,0 +1,90 @@
+qa.q: 日本の旧石器時代で、人類は何を使っていた?
+qa.crtAnsIdx: 1
+qa.crtArrLen: 3
+0: 磨製石器
+1: 打製石器
+2: 原石石器
+
+
+
+qa.q: 縄文時代、人類はなんと呼ばれる建物で暮らしていた?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 竪穴住居
+1: 豆腐住居
+2: 洞窟
+
+
+
+qa.q: 弥生時代に大陸から九州北部に伝わり、日本各地に広まったものは?
+qa.crtAnsIdx: 2
+qa.crtArrLen: 3
+0: 釣り
+1: 土偶
+2: 稲作
+
+
+
+qa.q: 弥生時代、中国の歴史書で日本はなんと呼ばれていたか?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 倭
+1: 魏
+2: 傀
+
+
+
+qa.q: 邪馬台国の女王の名前をなんという?
+qa.crtAnsIdx: 2
+qa.crtArrLen: 3
+0: 山田
+1: 輝子
+2: 卑弥呼
+
+
+
+qa.q: 中国や朝鮮から日本に来た人々を何という?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 渡来人
+1: 渡海人
+2: 航海人
+
+
+
+qa.q: 中大兄皇子や中臣鎌足らが曽我氏をほろぼし、政治改革を始めた大化の改新が起きたのはいつ?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 465年
+1: 765年
+2: 645年
+
+
+
+qa.q: 奈良時代に扱われた貨幣をなんという?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 和同開珎
+1: 雲湖朕鎮
+2: 寛永通宝
+
+
+
+qa.q: 平安時代に真言宗を伝えたのは誰?
+qa.crtAnsIdx: 1
+qa.crtArrLen: 3
+0: 最澄
+1: 空海
+2: 猊下
+
+
+
+qa.q: 鎌倉時代の将軍と御家人の関係として、御家人から将軍への関係を何という?
+qa.crtAnsIdx: 0
+qa.crtArrLen: 3
+0: 奉公
+1: 奉仕
+2: 奉行
+
+
+
