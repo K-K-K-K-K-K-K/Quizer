@@ -2,17 +2,23 @@
 #include <string.h>
 #include "QAUnit.h"
 
-getQA(char *line);
+QA qas[PSIZE];
 
-QA *getQAs(char *path) {
-	QA qas[PSIZE];
-	
+QA getQA(char *line);
+
+QA *getQAs(char *path, int readSize) {
+	char ch;
 	FILE *fp;
-	//for (ファイルの終わりまで) {
-		 //一行読み込む
-		qas[i] = getQA(line);
-	//}
-
+	sprintf(path,"%s%s%s","QAdata/",path, ".qa");
+	fp = fopen(path, "r");
+	for(int i=0;i < readSize;i++){
+		char *line;
+		strcpy(line,"");
+		while( ( ch = fgetc(fp)) != '\n'){ //一行読み込む
+			sprintf(line,"%s%c",line,ch);	
+			qas[i] = getQA(line);
+		}
+	}
 	return qas;
 }
 
@@ -20,29 +26,52 @@ QA *getQAs(char *path) {
 QA getQA(char *line) {
 	// 「咫尺」の読みは?:しせき|!かしょく|がいかく
 	QA qa;
-
-	// :が来るまで読込み、qa.qにstrcpy
-	strcpy(qa.q, "わかる？突っ込め。突っ込めって言ってんの、ね？突っ込めって言ってんだよォ！");
-
+	strcpy(qa.q,"");
+	for (int i = 0; i < ASIZE; i++)
+		strcpy(qa.a[i], "");
 	int i;
-	// 反復 for (i = 0; ) {
-		// もし最初に!がある
-			qa.crtAnsIdx = i;
-		//
-		
 
-		// |がくる
-			strcpy(qa.a[i], "文字列");
-		// 
-	//
-	
+	for(i=0;line[i]!=':';i++){// :が来るまで読込み、qa.qにstrcpy
+		sprintf(qa.q, "%s%c",qa.q,line[i]);
+	}
+	i++;
+
+	int j;
+	for(j = 0; line[i] != '\0'; j++) {
+		// もし最初に!がある
+		if (line[i] == '!'){
+			qa.crtAnsIdx = j;
+			i++;
+		}
+
+		//|が来るまで読込み、qa.qに代入
+		for (; line[i] != '|' ; i++) {
+			sprintf(qa.a[j], "%s%c",qa.a[j],line[i]);
+			if(line[i] == '\0') {
+				goto out;
+			}
+		}
+		i++;
+	}
+	out:
+
 	// 反復回数を代入
-	qa.ansArrLen = i;
+	qa.ansArrLen = j + 1;
 
 	return qa;
 }
 
 void main(int argc, char **argv) {
-	QA qa = getQA(argv[0]);
+	char *s = "「咫尺」の読みは?:しせき|!かしょく|がいかく";
+
+	QA qa = getQA(s);
+
+	printf("qa.q: %s\n", qa.q);
+	printf("qa.crtAnsIdx: %d\n", qa.crtAnsIdx);
+	printf("qa.crtArrLen: %d\n", qa.ansArrLen);
+
+	for (int i = 0; i < qa.ansArrLen; i++)
+		printf("%d: %s\n", i, qa.a[i]);
+	printf("\n");
 }
 
