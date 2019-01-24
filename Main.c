@@ -94,5 +94,7 @@ void mrymryhrhrhrhr() {
 	qa.ansArrLen = 3;
 	qa.crtAnsIdx = 1;
 	quiz(qa);
+
+	ansFinProc();
 }
 

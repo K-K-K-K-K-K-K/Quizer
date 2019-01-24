@@ -3,6 +3,7 @@
 
 void initAnsProc();
 void ansProc(int crtAnsNum);
+void ansFinProc();
 
 #endif
 
