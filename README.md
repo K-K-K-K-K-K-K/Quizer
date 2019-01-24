@@ -13,7 +13,7 @@ $ ninja
 
 ### コマンド手打ちの場合
 ```
-$ gcc Main.c Quiz.c Quiz.h AnsProc.c AnsProc.h -o Quizer
+$ gcc Main.c Quiz.c QAUnit.h AnsProc.c QAFileReader.c -o Quizer
 ```
 
 

@@ -52,6 +52,8 @@ void ansProc(int crtAnsNum) {
 	int td = (int) (t2 - t1);
 	tcnt += td;
 	printf("\n    経過時間:  %d [秒]\n",tcnt);
+	printf("\n");
+	printf("\n");
 }
 
 void ansFinProc() {

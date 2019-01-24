@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "QAUnit.h"
-
-QA qas[PSIZE];
+#include "QAFileReader.h"
 
 QA cvtQAStruct(char *line);
 
@@ -65,7 +63,7 @@ QA cvtQAStruct(char *line) {
 	return qa;
 }
 
-void main() {
+void testRunnner() {
 	// cvtQAStructのテスト
 /*	char *s = "「咫尺」の読みは?:しせき|!かしょく|がいかく";
 

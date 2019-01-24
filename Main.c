@@ -4,6 +4,7 @@
 #include "QAUnit.h"
 #include "Quiz.h"
 #include "AnsProc.h"
+#include "QAFileReader.h"
 
 void printStartMsg();
 void printHelpMsg();
@@ -46,7 +47,16 @@ void main() {
 					break;
 
 				case 3:
-					printf("KANJI\n");
+					{
+						initQuiz();
+						initAnsProc();
+						
+						readQAFile("漢字");
+						for (int i = 0; i < 27; i++)
+							quiz(qas[i]);
+
+						ansFinProc();
+					}
 					printf("\n");
 					break;
 
