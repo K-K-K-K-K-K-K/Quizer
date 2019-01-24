@@ -26,7 +26,7 @@ void main() {
 			!strcmp(sel, "1") ||
 			!strcmp(sel, "2") ||
 			!strcmp(sel, "3") ||
-			!strcmp(sel, "364364")
+			!strcmp(sel, "4")
 		) {
 			if(!strcmp(sel, "364364")) {
 				mrymryhrhrhrhr();
@@ -60,11 +60,18 @@ void main() {
 					printf("\n");
 					break;
 
-				/*case 364364:
-					mrymryhrhrhrhr();
-					printf("\n");
+				case 4:
+					{
+						initQuiz();
+						initAnsProc();
+						
+						readQAFile("歴史");
+						for (int i = 0; i < 10; i++)
+							quiz(qas[i]);
+
+						ansFinProc();
+					}
 					break;
-				*/
 
 				default:
 					printf("[エラー] 不正な入力\n");
@@ -87,7 +94,8 @@ void printHelpMsg() {
 	printf("コマンド一覧表\n");
 	printf("    1: 終了\n");
 	printf("    2: コマンド一覧表の表示\n");
-	printf("    3: [Quiz] 漢字の読み方\n");
+	printf("    3: [問題] 漢字の読み方\n");
+	printf("    4: [問題] 歴史知識\n");
 	printf("    \n");
 }
 
