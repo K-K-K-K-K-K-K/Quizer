@@ -24,34 +24,22 @@ void initAnsProc() {
 void ansProc(int crtAnsNum) {
 	pcnt++;
 
+	int ans;
 	time_t t1 = time(NULL);
-	
-	int ans,flag;
-	char data[255];
-	while(1){
-		printf("回答を入力してください\n");
-		printf("> ");
-		scanf("%s",data);
-		if(strlen(data)>1){
-			flag = 1;
-		}
-		else if(data[0] >= 48 && data[0] <= 52){
-			flag =0;
-			ans = ans * 10 + data[0]-'0';
-		
-		}
-		else {
-			flag = 1;
-		}
-		
-		if(flag==0){
+
+	char sel[1000];
+	for (;;) {
+		scanf("%s", sel);
+
+		if(sel[0] >= 48 && sel[0] <= 57){
+			ans = sel[0] - '0';
 			break;
 		}
-		else if(flag==1){
-			printf("入力方法が不適です。再度入力してください\n");
-		
-		}
+
+		printf("\n    [エラー]: 不正な入力\n");
+		printf("    >> ");
 	}
+printf("%d\n", ans);
 	time_t t2 = time(NULL);
 
 	printf("\n");
